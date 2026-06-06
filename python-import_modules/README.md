@@ -9,3 +9,4 @@
 - `100-my_calculator.py`: calculator using imported functions
 - `101-easy_print.py`: prints #pythoniscool without using print
 - `102-magic_calculation.py`: Python function from bytecode
+- `103-fast_alphabet.py`: prints the alphabet in uppercase
