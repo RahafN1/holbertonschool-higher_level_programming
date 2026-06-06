@@ -7,3 +7,4 @@ This directory contains Python scripts focusing on conditionals, loops, and func
 - `1-last_digit.py`: prints the last digit of a random number
 - `2-print_alphabet.py`: prints the ASCII alphabet in lowercase
 - `3-print_alphabt.py`: prints the ASCII alphabet without q and e
+- `4-print_hexa.py`: prints numbers from 0 to 98 in decimal and hexadecimal
