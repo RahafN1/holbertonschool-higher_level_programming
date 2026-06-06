@@ -13,3 +13,4 @@ This directory contains Python scripts focusing on conditionals, loops, and func
 - `7-islower.py`: checks if a character is lowercase
 - `8-uppercase.py`: prints a string in uppercase
 - `9-print_last_digit.py`: prints the last digit of a number
+- `10-add.py`: adds two integers and returns the result
