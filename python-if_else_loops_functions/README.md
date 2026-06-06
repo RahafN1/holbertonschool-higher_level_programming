@@ -17,3 +17,4 @@ This directory contains Python scripts focusing on conditionals, loops, and func
 - `11-pow.py`: computes a to the power of b
 - `12-fizzbuzz.py`: prints FizzBuzz from 1 to 100
 - `100-print_tebahpla.py`: prints alphabet in reverse alternating lowercase/uppercase
+- `101-remove_char_at.py`: removes character at position n from a string
