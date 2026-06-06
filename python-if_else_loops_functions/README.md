@@ -10,3 +10,4 @@ This directory contains Python scripts focusing on conditionals, loops, and func
 - `4-print_hexa.py`: prints numbers from 0 to 98 in decimal and hexadecimal
 - `5-print_comb2.py`: prints numbers from 0 to 99 with two digits
 - `6-print_comb3.py`: prints all possible combinations of two digits
+- `7-islower.py`: checks if a character is lowercase
