@@ -4,3 +4,4 @@ This directory contains Python scripts focusing on conditionals, loops, and func
 
 ## Files
 - `0-positive_or_negative.py`: prints if a number is positive, negative or zero
+- `1-last_digit.py`: prints the last digit of a random number
