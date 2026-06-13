@@ -18,8 +18,13 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     n = len(text)
-    for i, char in enumerate(text):
+    i = 0
+    while i < n:
+        char = text[i]
+        if char == " " and (i == 0 or text[i - 1] in ".?:"):
+            i += 1
+            continue
+        print(char, end="")
         if char in ".?:" and i + 1 < n:
-            print(char + "\n")
-        else:
-            print(char, end="")
+            print("\n")
+        i += 1
