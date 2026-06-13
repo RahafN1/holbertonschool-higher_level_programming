@@ -1,16 +1,27 @@
 #!/usr/bin/python3
-"""
-Module for matrix multiplication using NumPy.
-"""
+"""Module that multiplies two matrices using NumPy"""
+
 import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
-    """
-    Multiplies two matrices using NumPy.
-    """
-    a = np.array(m_a)
-    b = np.array(m_b)
-    if a.ndim == 0 or b.ndim == 0:
-        raise ValueError("Scalar operands are not allowed, use '*' instead")
-    return np.matmul(a, b)
+    """Multiply two matrices using NumPy"""
+
+    try:
+        return np.matmul(m_a, m_b)
+    except ValueError:
+        a = np.array(m_a)
+        b = np.array(m_b)
+
+        if len(a.shape) == 2 and len(b.shape) == 2:
+            raise ValueError(
+                "shapes {} and {} not aligned: {} (dim 1) != {} (dim 0)"
+                .format(
+                    a.shape,
+                    b.shape,
+                    a.shape[1],
+                    b.shape[0]
+                )
+            )
+
+        raise
