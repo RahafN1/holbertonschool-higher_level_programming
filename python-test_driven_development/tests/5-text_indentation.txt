@@ -1,35 +1,74 @@
-The ``5-text_indentation`` module
-====================================
+================================
+How to use 5-text_indentation.py
+================================
 
-Import
-------
-    >>> text_indentation = __import__('5-text_indentation').text_indentation
+Import the function:
+    >>> text_indentation = _import_('5-text_indentation').text_indentation
 
-Testing
--------
-    >>> text_indentation("Hello. How are you? I am fine: thanks.")
+Test basic with period:
+    >>> text_indentation("Hello. World.")
     Hello.
     <BLANKLINE>
+    World.
+    <BLANKLINE>
+
+Test with question mark:
+    >>> text_indentation("How are you? Good.")
     How are you?
     <BLANKLINE>
-    I am fine:
+    Good.
     <BLANKLINE>
-    thanks.
 
-    >>> text_indentation(89)
+Test with colon:
+    >>> text_indentation("Note: done.")
+    Note:
+    <BLANKLINE>
+    done.
+    <BLANKLINE>
+
+Test no special characters:
+    >>> text_indentation("Hello World")
+    Hello World
+
+Test spaces after special character are stripped:
+    >>> text_indentation("Hi.   Next.")
+    Hi.
+    <BLANKLINE>
+    Next.
+    <BLANKLINE>
+
+Test empty string:
+    >>> text_indentation("")
+
+Test text is not a string (integer):
+    >>> text_indentation(42)
     Traceback (most recent call last):
     TypeError: text must be a string
 
-    >>> text_indentation([1, 2, 3])
-    Traceback (most recent call last):
-    TypeError: text must be a string
-
+Test text is None:
     >>> text_indentation(None)
     Traceback (most recent call last):
     TypeError: text must be a string
 
-    >>> text_indentation("")
+Test multiple special characters together:
+    >>> text_indentation("Wait....")
+    Wait.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
 
+Test missing argument:
     >>> text_indentation()
     Traceback (most recent call last):
     TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test no trailing space at beginning of line:
+    >>> text_indentation("Hello:    world.")
+    Hello:
+    <BLANKLINE>
+    world.
+    <BLANKLINE>
