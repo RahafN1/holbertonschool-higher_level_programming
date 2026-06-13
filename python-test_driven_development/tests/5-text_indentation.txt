@@ -15,7 +15,6 @@ Testing
     I am fine:
     <BLANKLINE>
     thanks.
-    <BLANKLINE>
 
     >>> text_indentation(89)
     Traceback (most recent call last):
@@ -30,7 +29,6 @@ Testing
     TypeError: text must be a string
 
     >>> text_indentation("")
-    <BLANKLINE>
 
     >>> text_indentation()
     Traceback (most recent call last):
