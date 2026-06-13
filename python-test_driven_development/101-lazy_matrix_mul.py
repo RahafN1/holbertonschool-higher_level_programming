@@ -13,4 +13,4 @@ def lazy_matrix_mul(m_a, m_b):
     b = np.array(m_b)
     if a.shape == () or b.shape == ():
         raise ValueError("Scalar operands are not allowed, use '*' instead")
-    return np.matmul(a, b)
+    return np.dot(a, b)
