@@ -11,16 +11,19 @@ Testing
     Hello.
     <BLANKLINE>
     World.
+    <BLANKLINE>
 
     >>> text_indentation("How are you? Good.")
     How are you?
     <BLANKLINE>
     Good.
+    <BLANKLINE>
 
     >>> text_indentation("Note: done.")
     Note:
     <BLANKLINE>
     done.
+    <BLANKLINE>
 
     >>> text_indentation("Hello World")
     Hello World
@@ -29,6 +32,7 @@ Testing
     Hi.
     <BLANKLINE>
     Next.
+    <BLANKLINE>
 
     >>> text_indentation("")
 
