@@ -26,5 +26,5 @@ def text_indentation(text):
             continue
         print(char, end="")
         if char in ".?:" and i + 1 < n:
-            print()
+            print("\n")
         i += 1
