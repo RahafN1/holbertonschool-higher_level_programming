@@ -13,4 +13,6 @@ def lazy_matrix_mul(m_a, m_b):
     b = np.array(m_b)
     if a.shape == () or b.shape == ():
         raise ValueError("Scalar operands are not allowed, use '*' instead")
-    return np.dot(a, b)
+    if a.ndim != 2 or b.ndim != 2 or a.shape[1] != b.shape[0]:
+        return np.dot(a, b)
+    return np.einsum('ij,jk->ik', a, b)
