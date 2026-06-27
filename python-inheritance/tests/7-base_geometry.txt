@@ -72,3 +72,23 @@ Test list raises TypeError:
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] value must be an integer
+
+Test dict raises TypeError:
+    >>> try:
+    ...     bg.integer_validator("value", {1: 2})
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] value must be an integer
+
+Test -1 raises ValueError:
+    >>> try:
+    ...     bg.integer_validator("size", -1)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [ValueError] size must be greater than 0
+
+Test large valid integer:
+    >>> bg.integer_validator("big", 1000000)
+
+Test value of 1 is valid:
+    >>> bg.integer_validator("min", 1)
