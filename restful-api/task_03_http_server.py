@@ -8,7 +8,7 @@ Supported endpoints:
     /status  -> Plain text API status ("OK")
     /info    -> JSON with API version and description
 
-Any other path returns a 404 Not Found JSON error message.
+Any other path returns a plain text 404 Not Found message.
 """
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -37,7 +37,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self._send_json(200, info)
 
         else:
-            self._send_json(404, {"error": "Endpoint not found"})
+            self._send_text(404, "Endpoint not found")
 
     def _send_text(self, status_code, message):
         """Send a plain text response."""
